@@ -2,11 +2,29 @@ package br.senai.sc.livros.model.dao;
 
 import br.senai.sc.livros.model.entities.*;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.*;
 
 public class LivroDAO {
     private static Collection<Livro> listaLivros = new HashSet<>();
 
+//
+//    public boolean inserir(Livro livro) throws SQLException {
+//            Pessoa pessoa = new pessoa("Leo Rafaelli", "cabelinho123@netuno.com.br", "00000-0000", 18);
+//            String sql = "insert into contatos(nome, email, telefone, idade)" +
+//                    "values (?,?,?,?)";
+//            br.senai.sc.livros.model.dao.Conexao conexao = new br.senai.sc.livros.model.dao.Conexao();
+//            Connection connection = conexao.conectaBD();
+//            PreparedStatement statement = connection.prepareStatement(sql);
+//            statement.setString(1, pessoa.getNome());
+//            statement.setString(2, pessoa.getEmail());
+//            statement.setString(3, pessoa.getTelefone());
+//            statement.setInt(4, pessoa.getIdade());
+//            statement.execute();
+//            connection.close();
+//    };
 
     static{
 
