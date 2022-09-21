@@ -14,7 +14,7 @@ public class PessoaDAO {
 
     public void inserir(Pessoa pessoa) throws SQLException {
 //        Autor autor = new Autor("12435678", "autor", "Rafaellizin","autor@", Genero.MASCULINO, "123");
-        String sql = "insert into pessoa(cpf, nome, sobrenome, email, genero, senha)" +
+        String sql = "insert into PESSOA(cpf, nome, sobrenome, email, genero, senha)" +
                 "values (?,?,?,?,?,?)";
         Conexao conexao = new Conexao();
         Connection connection = conexao.conectaBD();
@@ -24,7 +24,7 @@ public class PessoaDAO {
         statement.setString(2, pessoa.getNome());
         statement.setString(3, pessoa.getSobrenome());
         statement.setString(4, pessoa.getEmail());
-        statement.setObject(5, pessoa.getGenero());
+        statement.setInt(5, pessoa.getGenero().ordinal());
         statement.setString(6, pessoa.getSenha());
         statement.execute();
         connection.close();

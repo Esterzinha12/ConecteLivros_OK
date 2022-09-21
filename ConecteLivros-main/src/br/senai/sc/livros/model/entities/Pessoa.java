@@ -18,7 +18,6 @@ public class Pessoa {
         this.senha = senha;
     }
 
-
     public String getCPF() {
         return CPF;
     }
